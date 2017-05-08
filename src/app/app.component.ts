@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FileUploader } from 'ng2-file-upload';
+
+const URL = 'http://localhost:8080/file.php';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  uploader:FileUploader = new FileUploader({url: URL});
+
+
 }
